@@ -197,7 +197,7 @@ namespace AvaloniaEdit.Editing
                     {
                         foreach (var segment in segments.Reverse())
                         {
-                            foreach (var writableSegment in textArea.GetDeletableSegments(segment).Reverse())
+                            foreach (var writableSegment in ((IEnumerable<ISegment>)textArea.GetDeletableSegments(segment)).Reverse())
                             {
                                 transformSegment(textArea, writableSegment);
                             }
